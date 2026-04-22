@@ -1,9 +1,21 @@
-import example.pepita
-
+import elementos.*
+import deportes.*
+import victoria.victoria
 describe "group of tests for pepita" {
 
   test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+    victoria.cambiar(judo)
+    victoria.cambiar_elemento(traje)
+    victoria.nuevo_entrenador(4)
+    assert.equals(7900, victoria.presupuesto_total())
+  }
+
+  test "victoria test" {
+    victoria.cambiar(tennis)
+    victoria.cambiar_elemento(raqueta)
+    victoria.nueva(210)
+    victoria.nuevo_entrenador(2)
+    assert.equals(7900, victoria.presupuesto_total())
   }
 
 }
